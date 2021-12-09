@@ -10,9 +10,9 @@ namespace Service.FW.Concrete
 {
     public class CompanyUserService:BaseService<CompanyUser>
     {
-        public bool UserLogin(string FirstName, string password)
+        public bool UserLogin(string UserName, string password)
         {
-            bool result = Any(x => x.FirstName == FirstName && x.Password == password);
+            bool result = Any(x => x.UserName == UserName && x.Password == password);
             return result;
         }
     }

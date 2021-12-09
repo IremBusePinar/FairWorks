@@ -43,7 +43,7 @@ namespace WebUII.Attributes
         public override string[] GetRolesForUser(string username)
         {
             var userRoleList = from user in db.CompanyUsers
-                               join userandrole in db.CompanyUserAndRoles    on user.ID equals userandrole.CompanyUserID
+                               join userandrole in db.CompanyUserAndRoles on user.ID equals userandrole.CompanyUserID
                                join role in db.CompanyUserRoles on userandrole.CompanyRoleID equals role.ID
                                where user.UserName == username
                                select role.Role;

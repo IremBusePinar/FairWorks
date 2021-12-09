@@ -44,3 +44,14 @@ C:\Users\alicanp\Desktop\FairWorks-master\Core.FW\obj\Debug\Core.FW.csproj.CoreC
 C:\Users\alicanp\Desktop\FairWorks-master\Core.FW\obj\Debug\Core.FW.csproj.CopyComplete
 C:\Users\alicanp\Desktop\FairWorks-master\Core.FW\obj\Debug\Core.FW.dll
 C:\Users\alicanp\Desktop\FairWorks-master\Core.FW\obj\Debug\Core.FW.pdb
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\Core.FW.dll.config
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\Core.FW.dll
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\Core.FW.pdb
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\EntityFramework.dll
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\EntityFramework.xml
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\obj\Debug\Core.FW.csproj.CoreCompileInputs.cache
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\obj\Debug\Core.FW.csproj.CopyComplete
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\obj\Debug\Core.FW.dll
+C:\Users\alicanp\Desktop\FAIRWORKSS\Core.FW\obj\Debug\Core.FW.pdb

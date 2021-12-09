@@ -9,5 +9,6 @@ namespace Core.FW.CoreEntity
    public class BaseEntity : IEntity<Guid>
     {
         public Guid ID { get; set; }
+        public int MasterID { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace WebUII.Controllers
 
         CompanyUserService companyUserService = new CompanyUserService();
 
-        public PartialViewResult _NavbarPartial()
+        public PartialViewResult NavbarPartial()
         {
             return PartialView();
         }
@@ -67,10 +67,11 @@ namespace WebUII.Controllers
                         FormsAuthentication.SetAuthCookie(user.UserName, true);
 
 
-                        return RedirectToAction("Index","Home",new { area="Administrator"});
+                        return RedirectToAction("Index");
                     }
                     else
                     {
+                       
                         return View();
                     }
                 }

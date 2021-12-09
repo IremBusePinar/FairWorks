@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Base\BaseService.cs" />
     <Compile Include="Concrete\CompanyService.cs" />
+    <Compile Include="Concrete\CompanyUserAndRoleService.cs" />
+    <Compile Include="Concrete\CompanyUserRoleService.cs" />
     <Compile Include="Concrete\CompanyUserService.cs" />
     <Compile Include="Concrete\FairParticipantService.cs" />
     <Compile Include="Concrete\FairService.cs" />

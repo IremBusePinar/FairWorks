@@ -10,6 +10,6 @@ namespace Core.FW.CoreMap
 {
    public class CoreMap<T> : EntityTypeConfiguration<T> where T : BaseEntity
     {
-
+       
     }
 }

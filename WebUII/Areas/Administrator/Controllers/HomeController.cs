@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace WebUII.Areas.Administrator.Controllers
 {
-    [Authorize(Roles = "admin")]
+    //[Authorize(Roles = "admin")]
+    //[RouteArea("admin")]
     public class HomeController : Controller
     {
-        // GET: Administrator/Home
+        //GET: Administrator/Home
         public ActionResult Index()
         {
             return View();

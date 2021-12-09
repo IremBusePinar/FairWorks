@@ -1,11 +1,14 @@
-﻿using Model.FW.Entity;
+﻿using Core.FW.CoreEntity;
+using Model.FW.Entity;
 using Model.FW.Map;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Model.FW.Context
 {
@@ -46,6 +49,7 @@ namespace Model.FW.Context
 
             base.OnModelCreating(modelBuilder);
         }
+       
 
     }
 }

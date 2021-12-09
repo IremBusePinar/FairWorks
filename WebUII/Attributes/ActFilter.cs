@@ -1,6 +1,7 @@
 ﻿using Model.FW.Context;
 using Model.FW.DesignPattern;
 using Model.FW.Entity;
+using Service.FW.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace WebUII.Attributes
     {
 
         AppDbContext db = Singleton.Context;
+        
         CompanyUser user = new CompanyUser();
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
@@ -36,7 +38,7 @@ namespace WebUII.Attributes
 
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            throw new NotImplementedException();
+           
         }
     }
 }
