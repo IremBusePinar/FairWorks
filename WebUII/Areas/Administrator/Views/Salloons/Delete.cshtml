@@ -1,0 +1,49 @@
+﻿@model Model.FW.Entity.Salloon
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Salonu Sil</h2>
+
+<h3>Bu salonu silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Salloon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SalloonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalloonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhichSector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhichSector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StandNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StandNumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

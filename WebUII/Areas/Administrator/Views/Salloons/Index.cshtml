@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Model.FW.Entity.Salloon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Salonları Listele</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table width="100%" id="example-table" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SalloonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhichSector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StandNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalloonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhichSector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StandNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>}
+    </tbody>
+
+</table>

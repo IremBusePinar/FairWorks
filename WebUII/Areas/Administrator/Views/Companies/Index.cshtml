@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Model.FW.Entity.Company>
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml"; }
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class=" ">
+    <table width="100%" id="example-table" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sector)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.CompanyName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sector)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.City)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Country)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+        </tbody>
+    </table>
+</div>
+

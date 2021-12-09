@@ -1,0 +1,121 @@
+﻿@model Model.FW.Entity.FairParticipant
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Şirketi Sil</h2>
+
+<h3>Bu şirketi silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>FairParticipant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyProfile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtraNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtraNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastOfferDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastOfferDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StandType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StandType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

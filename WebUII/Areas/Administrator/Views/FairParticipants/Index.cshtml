@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Model.FW.Entity.FairParticipant>
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2>Şirket Listesi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+
+    }
+</script>
+ <div  id="printMe">
+
+
+
+     <table width="100%" id="example-table" class="table table-striped table-bordered">
+         <thead>
+             <tr>
+                 <th>
+                     @Html.DisplayNameFor(model => model.SalesPerson)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.MeetingDate)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.User.FirstName)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.CompanyName)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.CompanyProfile)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.FairName.FairName)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.Salloon.SalloonName)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.ExtraNotes)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.OfferDate)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.LastOfferDate)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.ContractDate)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.ContractType)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.StandType)
+                 </th>
+
+                 <th>
+                     @Html.DisplayNameFor(model => model.M2.M2)
+                 </th>
+
+                 <th>
+                     @Html.DisplayNameFor(model => model.M2Price)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.DiscountRate)
+                 </th>
+                 <th>
+                     @Html.DisplayNameFor(model => model.Price)
+                 </th>
+                 <th></th>
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+             <tr>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.SalesPerson)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.MeetingDate)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.User.FirstName)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.Company.CompanyName)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.CompanyProfile)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.FairName.FairName)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.Salloon.SalloonName)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.ExtraNotes)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.OfferDate)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.LastOfferDate)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.ContractDate)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.ContractType)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.StandType)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.M2.M2)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.M2Price)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.DiscountRate)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => item.Price)
+                 </td>
+                 <td>
+                     @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                     @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                     @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                 </td>
+             </tr>
+}
+         </tbody>
+     </table>
+
+    <button type="button" class="btn btn-primary" onclick="printDiv('printMe')">Yazdır</button>
+</div>
+ 

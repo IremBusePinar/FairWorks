@@ -1,0 +1,53 @@
+﻿
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIRWORKS</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="~/Content/Navbar_css_and_js/A.style.css.pagespeed.cf.4cGS_Kvzku.css" rel="stylesheet" />
+    <link href="~/Content/Navbar_css_and_js/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <section id="container" class="">
+        @Html.Action("_NavbarPartial", "Home")
+        <!--sidebar start-->
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                @RenderBody()
+            </section>
+        </section>
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                2013 &copy; FlatLab by VectorLab.
+                <a href="#" class="go-top">
+                    <i class="icon-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/Navbar_css_and_js/jquery.min.js"></script>
+    <script src="~/Content/Navbar_css_and_js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.CkBNE38wgd.js"></script>
+</body>
+</html>

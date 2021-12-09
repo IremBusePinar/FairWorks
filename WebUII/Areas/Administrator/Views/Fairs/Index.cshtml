@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Model.FW.Entity.Fair>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Fuar Listesi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table width="100%" id="example-table" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FairName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TheNumberOfParticipant)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FairName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TheNumberOfParticipant)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>}
+    </tbody>
+
+</table>

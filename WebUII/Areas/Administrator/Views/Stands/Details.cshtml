@@ -1,0 +1,43 @@
+﻿@model Model.FW.Entity.Stand
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Stand Detayları</h2>
+
+<div>
+    <h4>Stand</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StandNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StandNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

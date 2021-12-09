@@ -1,0 +1,51 @@
+﻿@model Model.FW.Entity.Fair
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>FUar Detayları</h2>
+
+<div>
+    <h4>Fair</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FairName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FairName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TheNumberOfParticipant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheNumberOfParticipant)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
