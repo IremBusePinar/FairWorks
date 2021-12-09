@@ -67,7 +67,7 @@ namespace WebUII.Controllers
                         FormsAuthentication.SetAuthCookie(user.UserName, true);
 
 
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index","Home",new {area=""});
                     }
                     else
                     {

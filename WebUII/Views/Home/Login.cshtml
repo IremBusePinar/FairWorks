@@ -3,17 +3,53 @@
 
 
 @{ ViewBag.Title = "Login";
-
-    Layout = null; }
-
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 
 
 
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/Content/css/bootstrap-reset.css" rel="stylesheet">
+<link href="~/Content/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/css/style.css" rel="stylesheet">
+<link href="~/Content/css/style-responsive.css" rel="stylesheet" />
+
+<section>
+<div class="container">
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Kullanıcı Girişi</h2>
+        <div class="login-wrap">
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "kullanıcı adı" })
+            @Html.ValidationMessageFor(x => x.UserName)
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "şifre", type = "password" })
+            @Html.ValidationMessageFor(x => x.Password)
+            <button class="btn btn-lg btn-login btn-block" type="submit">GİRİŞ YAP</button>
+        </div>
+    </form>
+</div>
+</section>
 
 
 
-<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<head>
     <style data-merge-styles="false"></style>
 
     <meta charset="UTF-8">
@@ -25,6 +61,7 @@
 
     <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 
     <title>Kullanıcı Girişi</title>
 
@@ -148,78 +185,62 @@
             -moz-osx-font-smoothing: grayscale;
         }
     </style>
-<!--<
+    <!--<
 
+    -->
 -->
-@*<*@@*script>
-        window.console = window.console || function (t) { };
-    </script>
+<!--@*<*@@*script>
+                window.console = window.console || function (t) { };
+            </script>
 
 
 
-<script>
-        if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-        }
-    </script>*@
+        <script>
+                if (document.location.search.match(/type=embed/gi)) {
+                    window.parent.postMessage("resize", "*");
+                }
+            </script>*@
 
 
-</head>
+<!--</head>
 
 <div class="login-page">
+
+
     <div class="form">
         <form class="register-form" method="post">
         </form>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <form class="login-form">
 
-            @Html.TextBoxFor(x=>x.UserName,new {@class="form-control", placeholder="Kullanıcı Adı" })
-            @Html.ValidationMessageFor(x=>x.UserName)
-            @Html.TextBoxFor(x => x.Password, new {@class="form-control",placeholder="Şifre",type="password" })
-            @Html.ValidationMessageFor(x=>x.Password)
+            @Html.TextBoxFor(x => x.UserName, htmlAttributes: new { @class = "form-control", placeholder = "Kullanıcı Adı" })
+            @Html.ValidationMessageFor(x => x.UserName, "", new { @class = "text-danger" })
+            @Html.TextBoxFor(x => x.Password, htmlAttributes: new { @class = "form-control", placeholder = "Şifre", type = "password" })
+            @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
 
             <button class="btn btn-lg" type="submit">GİRİŞ YAP</button>
+
+
+
 
 
         </form>
     </div>
 </div>
+@Scripts.Render("~/bundles/jqueryval")
 <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 @*<script id="rendered-js">
     //$('.message a').click(function () {
     //  $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
     //});
     ////# sourceURL=pen.js
-        </script>*@
+        </script>*@-->
 
 
 
-
-@*<link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
-<link href="~/Content/css/bootstrap-reset.css" rel="stylesheet">
-<link href="~/Content/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-<link href="~/Content/css/style.css" rel="stylesheet">
-<link href="~/Content/css/style-responsive.css" rel="stylesheet" />
-<div class="container">
-
-    <form class="form-signin" method="post">
-        <h2 class="form-signin-heading">YÖNETİCİ GİRİŞİ</h2>
-        <div class="login-wrap">
-            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", placeholder = "kullanıcı adı" })
-            @Html.ValidationMessageFor(x => x.UserName)
-            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", placeholder = "şifre", type = "password" })
-            @Html.ValidationMessageFor(x => x.Password)
-            <button class="btn btn-lg btn-login btn-block" type="submit">GİRİŞ YAP</button>
-
-
-
-        </div>
-
-
-    </form>
-
-</div>*@
 
 
 

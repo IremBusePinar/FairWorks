@@ -13,7 +13,8 @@ namespace Model.FW.Entity
     {
         [Display(Name ="Katılımcı Firma Yetkilisi")]
         public string SalesPerson { get; set; }
-        [Display(Name = "Görüşme tarihi")]
+        [Display(Name = "Görüşme tarihi"),DataType(DataType.Date)]
+        
         public DateTime MeetingDate{ get; set; }
         [Display(Name = "Görüşme yapılan Firma çalışanı")]
         public CompanyUser User { get; set; }
@@ -27,9 +28,9 @@ namespace Model.FW.Entity
         public Salloon SalloonName { get; set; }
         [Display(Name = "Ekstra Notlar")]
         public string ExtraNotes { get; set; }
-        [Display(Name = "Teklif tarihi")]
+        [Display(Name = "Teklif tarihi"), DataType(DataType.Date)]
         public DateTime OfferDate { get; set; }
-        [Display(Name = "Teklifin son geçerlilik tarihi")]
+        [Display(Name = "Teklifin son geçerlilik tarihi"), DataType(DataType.Date)]
         public DateTime LastOfferDate { get; set; }
 
         [Display(Name = "Salon Numarası")]
@@ -38,7 +39,7 @@ namespace Model.FW.Entity
         public Stand StandNumber { get; set; }
         [Display(Name = "İstenilen metrekare")]
         public Stand M2 { get; set; }
-        [Display(Name = "Sözleşme Tarihi")]
+        [Display(Name = "Sözleşme Tarihi"), DataType(DataType.Date)]
         public DateTime ContractDate { get; set; }
         [Display(Name = "Sözleşme tipi")]
         public ContractType ContractType { get; set; }

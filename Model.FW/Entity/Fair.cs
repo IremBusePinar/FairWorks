@@ -14,9 +14,9 @@ namespace Model.FW.Entity
         public string FairName { get; set; }
         [Display(Name ="Sektör")]
         public Sector Sector { get; set; }
-        [Display(Name = "Fuar Başlangıç Tarihi"), Required(ErrorMessage = "Lütfen fuar başlangıç tarihini giriniz.")]
+        [Display(Name = "Fuar Başlangıç Tarihi"), Required(ErrorMessage = "Lütfen fuar başlangıç tarihini giriniz."), DataType(DataType.Date)]
         public DateTime FirstDay { get; set; }
-        [Display(Name = "Fuar Bitiş Tarihi"),Required(ErrorMessage ="Lütfen fuar bitiş tarihini giriniz.")]
+        [Display(Name = "Fuar Bitiş Tarihi"),Required(ErrorMessage ="Lütfen fuar bitiş tarihini giriniz."), DataType(DataType.Date)]
         public DateTime LastDay { get; set; }
         [Display(Name = "Salon Adı")]
         public Salloon SalloonName { get; set; }
